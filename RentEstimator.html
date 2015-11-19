@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SlateHouse Group rent estimate</title>
+
+    <!-- Bootstrap -->
+<!--    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet">  -->
+    <link href="BootStrap/bootstrap.min.css" rel="stylesheet">  
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<link rel ="stylesheet" type= "text/css" href="Custom CSS/SlateHouseCSS.css">
+<!-- <link rel ="stylesheet" type= "text/css" href="Javascript/CSS.css"> -->  
+
+
+</head>
+
+  <body>
+     <div class="container">
+      <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+          <p><h2>Welcome to the most accurate Rent Estimate for Lancaster, Lebanon, York, Berks, and Dauphin Counties.  This includes the cities of Harrisburg, Reading, Lancaster, and York.</h2></p>
+            <p>SlateHouse Group uses a combination of local knowledge, real rent data from hundreds of properties we manage, and feedback from the industry to continually perfect the best algorithm for accurate rent estimates.</p>
+            </div>
+        </div>
+
+        <!-- All of the page content goes here -->
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Fill in all of the following fields for your property to get the most accurate rent available:</p>
+          </div>
+        </div> <!-- End row --> 
+      <form method="post" name="emailform" action="emailform.php">
+        <div class ="row">
+           <div class="col-sm-4 col-xs-4">
+              <p>Name:</p>
+           </div>
+           <div class="col-sm-4 col-xs-4">
+            <input type="text" value="" name="name">
+        </div>
+        </div> <!-- End row --> 
+        <div class ="row">
+           <div class="col-sm-4 col-xs-4">
+              <p>Email Address:</p>
+           </div>
+           <div class="col-sm-4 col-xs-4">
+            <input type="text" value="" name="email">
+        </div>
+        </div> <!-- End row -->
+        <div class ="row">
+           <div class="col-sm-4 col-xs-4">
+              <p>Phone #:</p>
+           </div>
+           <div class="col-sm-4 col-xs-4">
+            <input type="text" value="" name="phone">
+        </div>
+        </div> <!-- End row --> 
+        <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>Street Address:</p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <input type="text" value="">
+          </div>
+        </div> <!-- End row -->   
+        <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>5 Digit ZipCode:</p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <input type="text" value="" id="zipCode">
+          </div>
+        </div> <!-- End row -->   
+        <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>Style of House:</p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <select size="1" id="HomeStyle">
+                    <option value="100">RowHouse</option>
+                    <option value="200">TownHouse</option>
+                    <option value="200">Apartment</option>
+                    <option value="300">Detached Home</option>
+
+            </select>
+          </div>
+        </div> <!-- End row -->  
+         <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>Year Built: </p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <input type="text" value="" id="yearBuilt">
+          </div>
+        </div> <!-- End row -->
+        <!-- <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p># of Units:</p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <select size="1">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+            </select>
+          </div>
+        </div> <!-- End row -->   
+    <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>Square Footage: </p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <input type="text" value="" id="SquareFootage">
+          </div>
+        </div> <!-- End row -->   
+        <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>Condition of the Unit: </p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <select size="1" id="unitCondition">
+                    <option value="49">Poor</option>
+                    <option value="101">Average</option>
+                    <option value="148">Above Average</option>
+                    <option value="197">High End</option>
+              </select>
+          </div>
+        </div> <!-- End row -->   
+
+         <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>Condition of Surrounding Units: </p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <select size="1" id="AreaCondition">
+                    <option value="52">Poor</option>
+                    <option value="103">Average</option>
+                    <option value="152">Above Average</option>
+                    <option value="201">High End</option>
+              </select>
+          </div>
+        </div> <!-- End row -->  
+
+        <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>Air Conditioning: </p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <select size="1" id = "airCondition">
+                    <option value="101">Yes</option>
+                    <option value="52">No</option>
+            </select>
+          </div>
+        </div> <!-- End row -->   
+        <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p># of Bedrooms: </p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <select size="1" id="numberOfBedrooms">
+                    <option value="103">1</option>
+                    <option value="198">2</option>
+                    <option value="297">3</option>
+                    <option value="396">4</option>
+                    <option value="495">5</option>
+              </select>
+          </div>
+        </div> <!-- End row -->  
+        <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p># of Bathrooms: </p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <select size="1" id="numberOfBathrooms">
+                    <option value="24">1</option>
+                    <option value="51">1.5</option>
+                    <option value="76">2</option>
+                    <option value="101">2.5</option>
+                    <option value="127">3</option>
+              </select>
+          </div>
+        </div> <!-- End row --> 
+    <div class="row">
+          <div class="col-sm-4 col-xs-4">
+            <p>Garage Size: </p>
+          </div>
+          <div class="col-sm-4 col-xs-4">
+            <select size="1" id="numberOfGarages">
+                    <option value="98">None</option>
+                    <option value="201">1 Car</option>
+                    <option value="302">2 Car</option>
+                    <option value="398">3 Car</option>
+            </select>
+          </div>
+        </div> <!-- End row --> 
+        <div class="row">
+          <div class="col-xs-4"></div>
+          <div class="col-xs-4">
+             <!-- <input type="submit" value="Get my real-time rent estimate"> -->
+             <input type="submit" onclick="RentValue()" value="Get my real-time rent estimate" style="background-color:#33FFCC;">
+          </div>
+        </div> <!-- end button row -->
+      </form>
+        <div class="row">
+          <div class="col-md-6 col-xs-4">
+            <!-- display the calculated rent value in the label below. -->
+            <label id="Display">
+
+            </label>
+          </div>
+        </div>
+        
+   <h3><p></p><br>
+    Contact SlateHouse Group at: <a href="mailto:service@slatehousegroup.com" target="_blank">service@slatehousegroup.com</a> or 717-413-6976 for a rate quote for property management
+            
+</h3>
+</div> <!-- end div container-->
+
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <!--   <script src="file:///C:/Users/cgallagher29/Desktop/SHGroup/Rent Estimator/javascript/jquery-1.11.1.min.js"></script>   -->
+ <script src="Javascript/jquery-1.11.1.min.js"></script>
+ <!--    <script src="javascript/jquery-1.11.1.min.js"></script>   -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <!-- <script src="Bootstrap/js/bootstrap.min.js"></script>  -->
+  <script src="BootStrap/bootstrap.min.js"></script>  
+
+    <script language="javascript">
+
+            function RentValue() {
+
+            var houseStyleVal = parseFloat(document.getElementById("HomeStyle").value),
+           // <!--var numUnitsVal = parseFloat(document.getElementById("numberOfUnits").value); -->
+                 yearBuiltVal = parseFloat(document.getElementById("yearBuilt").value),
+                 zipCodeVal = parseFloat(document.getElementById("zipCode").value),
+                 zipVal = 0;
+                 if(zipCodeVal == 17019 || zipCodeVal == 17302 || zipCodeVal == 17309 || zipCodeVal == 17311 || zipCodeVal == 17312 || zipCodeVal == 17313 || zipCodeVal == 17314 || zipCodeVal == 17315 || zipCodeVal == 17317 || zipCodeVal == 17318 || zipCodeVal == 17319 || zipCodeVal == 17321 || zipCodeVal == 17322 || zipCodeVal == 17323 || zipCodeVal == 17327 || zipCodeVal == 17329 || zipCodeVal == 17331 || zipCodeVal == 17339 || zipCodeVal == 17342 || zipCodeVal == 17345 || zipCodeVal == 17347 || zipCodeVal == 17349 || zipCodeVal == 17352 || zipCodeVal == 17354 || zipCodeVal == 17355 || zipCodeVal == 17356 || zipCodeVal == 17358 || zipCodeVal == 17360 || zipCodeVal == 17361 || zipCodeVal == 17362 || zipCodeVal == 17363 || zipCodeVal == 17364 || zipCodeVal == 17365 || zipCodeVal == 17366 || zipCodeVal == 17368 || zipCodeVal == 17370 || zipCodeVal == 17371 || zipCodeVal == 17401 || zipCodeVal == 17402 || zipCodeVal == 17403 || zipCodeVal == 17404 || zipCodeVal == 17405 || zipCodeVal == 17406 || zipCodeVal == 17407 || zipCodeVal == 19601 || zipCodeVal == 19602 || zipCodeVal == 19603 || zipCodeVal == 19604 || zipCodeVal == 19605 || zipCodeVal == 19606 || zipCodeVal == 19607 || zipCodeVal == 19608 || zipCodeVal == 19609 || zipCodeVal == 19610 || zipCodeVal == 19611 || zipCodeVal == 19612 || zipCodeVal == 17101 || zipCodeVal == 17102 || zipCodeVal == 17103 || zipCodeVal == 17104 || zipCodeVal == 17105 || zipCodeVal == 17106 || zipCodeVal == 17108 || zipCodeVal == 17109 || zipCodeVal == 17110 || zipCodeVal == 17111 || zipCodeVal == 17112 || zipCodeVal == 17113 || zipCodeVal == 17129){
+                  zipVal = -49;
+                 }
+                var unitConVal = parseFloat(document.getElementById("unitCondition").value),
+                 areaConVal = parseFloat(document.getElementById("AreaCondition").value),
+                 airConVal = parseFloat(document.getElementById("airCondition").value),
+                 numBedVal = parseFloat(document.getElementById("numberOfBedrooms").value),
+                 numBathVal = parseFloat(document.getElementById("numberOfBathrooms").value),
+                 numGarageVal = parseFloat(document.getElementById("numberOfGarages").value),
+                 squareFootageVal = parseFloat(document.getElementById("SquareFootage").value),
+                 SFVal = squareFootageVal * .1,
+                 extraVariable = -124;
+
+
+        if(zipCodeVal == 17501 || zipCodeVal == 19501 || zipCodeVal == 19301 || zipCodeVal == 17502 || zipCodeVal == 17503 || zipCodeVal == 17504 || zipCodeVal == 17505 || zipCodeVal == 17506 || zipCodeVal == 17507 || zipCodeVal == 15508 || zipCodeVal == 17566 || zipCodeVal == 17509 || zipCodeVal == 19330 || zipCodeVal == 17512 || zipCodeVal == 17516 || zipCodeVal == 17517 || zipCodeVal == 17518 || zipCodeVal == 17519 || zipCodeVal == 17520 || zipCodeVal == 17022 || zipCodeVal == 17521 || zipCodeVal == 17522 || zipCodeVal == 17527 || zipCodeVal == 17528 || zipCodeVal == 17529 || zipCodeVal == 17532 || zipCodeVal == 19344 || zipCodeVal == 17533 || zipCodeVal == 17534 || zipCodeVal == 17535 || zipCodeVal == 17536 || zipCodeVal == 17536 || zipCodeVal == 17537 || zipCodeVal == 17601 || zipCodeVal == 17602 || zipCodeVal == 17603 || zipCodeVal == 17604 || zipCodeVal == 17605 || zipCodeVal == 17606 || zipCodeVal == 17607 || zipCodeVal == 17608 || zipCodeVal == 17538 || zipCodeVal == 17540 || zipCodeVal == 17543 || zipCodeVal == 17545 || zipCodeVal == 17547 || zipCodeVal == 17549 || zipCodeVal == 17550 || zipCodeVal == 17551 || zipCodeVal == 17552 || zipCodeVal == 17554 || zipCodeVal == 17555 || zipCodeVal == 17557 || zipCodeVal == 17560 || zipCodeVal == 19365 || zipCodeVal == 17563 || zipCodeVal == 17564 || zipCodeVal == 17565 || zipCodeVal == 17566 || zipCodeVal == 17567 || zipCodeVal == 17568 || zipCodeVal == 17569 || zipCodeVal == 17572 || zipCodeVal == 17575 || zipCodeVal == 17576 || zipCodeVal == 17577 || zipCodeVal == 17578 || zipCodeVal == 17579 || zipCodeVal == 17580 || zipCodeVal == 17581 || zipCodeVal == 17582 || zipCodeVal == 17583 || zipCodeVal == 17584 || zipCodeVal == 17585 || zipCodeVal == 17042 || zipCodeVal == 17046 || zipCodeVal == 17003 || zipCodeVal == 17038 || zipCodeVal == 17088 || zipCodeVal == 17016 || zipCodeVal == 17064 || zipCodeVal == 17041 || zipCodeVal == 17010 || zipCodeVal == 17083 || zipCodeVal == 17077 || zipCodeVal == 17039 || zipCodeVal == 17085 || zipCodeVal == 17019 || zipCodeVal == 17302 || zipCodeVal == 17309 || zipCodeVal == 17311 || zipCodeVal == 17312 || zipCodeVal == 17313 || zipCodeVal == 17314 || zipCodeVal == 17315 || zipCodeVal == 17317 || zipCodeVal == 17318 || zipCodeVal == 17319 || zipCodeVal == 17321 || zipCodeVal == 17322 || zipCodeVal == 17323 || zipCodeVal == 17327 || zipCodeVal == 17329 || zipCodeVal == 17331 || zipCodeVal == 17339 || zipCodeVal == 17342 || zipCodeVal == 17345 || zipCodeVal == 17347 || zipCodeVal == 17349 || zipCodeVal == 17352 || zipCodeVal == 17354 || zipCodeVal == 17355 || zipCodeVal == 17356 || zipCodeVal == 17358 || zipCodeVal == 17360 || zipCodeVal == 17361 || zipCodeVal == 17362 || zipCodeVal == 17363 || zipCodeVal == zipCodeVal == 17364 || zipCodeVal == 17365 || zipCodeVal == 17366 || zipCodeVal == 17368 || zipCodeVal == 17370 || zipCodeVal == 17371 || zipCodeVal == 17401 || zipCodeVal == 17402 || zipCodeVal == 17403 || zipCodeVal == 17404 || zipCodeVal == 17405 || zipCodeVal == 17406 || zipCodeVal == 17407 || zipCodeVal == 18056 || zipCodeVal == 19503 || zipCodeVal == 19504 || zipCodeVal == 19506 || zipCodeVal == 19507 || zipCodeVal == 19508 || zipCodeVal == 19510 || zipCodeVal == 19511 || zipCodeVal == 19512 || zipCodeVal == 19516 || zipCodeVal == 19518 || zipCodeVal == 19519 || zipCodeVal == 19522 || zipCodeVal == 19523 || zipCodeVal == 19526 || zipCodeVal == 19529 || zipCodeVal == 19530 || zipCodeVal == 19533 || zipCodeVal == 19534 || zipCodeVal == 19535 || zipCodeVal == 19536 || zipCodeVal == 19538 || zipCodeVal == 19539 || zipCodeVal == 19540 || zipCodeVal == 19541 || zipCodeVal == 19542 || zipCodeVal == 19543 || zipCodeVal == 19544 || zipCodeVal == 19545 || zipCodeVal == 19547 || zipCodeVal == 19548 || zipCodeVal == 19550 || zipCodeVal == 19551 || zipCodeVal == 19554 || zipCodeVal == 19555 || zipCodeVal == 19557 || zipCodeVal == 19559 || zipCodeVal == 19560 || zipCodeVal == 19562 || zipCodeVal == 19564 || zipCodeVal == 19565 || zipCodeVal == 19567 || zipCodeVal == 19601 || zipCodeVal == 19602 || zipCodeVal == 19603 || zipCodeVal == 19604 || zipCodeVal == 19605 || zipCodeVal == 19606 || zipCodeVal == 19607 || zipCodeVal == 19608 || zipCodeVal == 19609 || zipCodeVal == 19610 || zipCodeVal == 19611 || zipCodeVal == 19612 || zipCodeVal == 17005 || zipCodeVal == 17018 || zipCodeVal == 17023 || zipCodeVal == 17028 || zipCodeVal == 17030 || zipCodeVal == 17030 || zipCodeVal == 17032 || zipCodeVal == 17033 || zipCodeVal == 17034 || zipCodeVal == 17036 || zipCodeVal == 17048 || zipCodeVal == 17057 || zipCodeVal == 17061 || zipCodeVal == 17080 || zipCodeVal == 17097 || zipCodeVal == 17098 || zipCodeVal == 17101 || zipCodeVal == 17102 || zipCodeVal == 17103 || zipCodeVal == 17104 || zipCodeVal == 17105 || zipCodeVal == 17106 || zipCodeVal == 17108 || zipCodeVal == 17109 || zipCodeVal == 17110 || zipCodeVal == 17111 || zipCodeVal == 17112 || zipCodeVal == 17113 || zipCodeVal == 17129){
+          if(yearBuiltVal.toString().length ===4 && yearBuiltVal > 1800 && yearBuiltVal < 2017){
+                           
+                  var total = 0,  yearBuiltNumber = yearBuiltVal - 1950;
+                  total = houseStyleVal + yearBuiltNumber + zipVal + unitConVal + areaConVal + airConVal +  numBedVal + numBathVal + numGarageVal + SFVal + extraVariable;
+                  if(total > 0){
+                      var displayMsg = "Your SlateHouse rent estimate is $" + parseInt(total);
+                      document.getElementById("Display").innerHTML = displayMsg;
+                      //var result = ("Your SlateHouse rent estimate is $" + total);
+                      //alert (result);
+                  }
+            }else{
+              var displayMsg = "You have entered an invalid year!";
+                        document.getElementById("Display").innerHTML = displayMsg;
+            }
+          }
+          else{
+            var displayMsg = "You have entered an address outside of AccurateRent territory!  AccurateRent only covers Lancaster, York, Lebanon, Berks, and Dauphin Counties.";
+                      document.getElementById("Display").innerHTML = displayMsg;
+          }  
+      }
+</script>
+
+</body>
+</html>
